@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class KartyaTrukkKonzolon {
 
-   private static String[] pakli = new String[22];
-    private static final Scanner sc = new Scanner(System.in);
+    
+    public static final Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         feltolt();
@@ -28,7 +28,7 @@ public class KartyaTrukkKonzolon {
         }
 
     }
-    
+
     private static void kirak() {
         for (int i = 1; i < pakli.length; i++) {
             System.out.printf("%-8s", pakli[i]);
