@@ -1,12 +1,11 @@
-package kartyatrukkkonzolon;
+package modell;
 
-public class Pakli {
+public final class Pakli {
 
     public String[] pakli = new String[22];
 
     public Pakli() {
         feltolt();
-        kirak();
     }
 
 
@@ -17,6 +16,7 @@ public class Pakli {
         if (hanyadik == 3) {
             ezVolt();
         }
+        setPakli(pakli);
     }
 
     private void feltolt() {
@@ -31,10 +31,11 @@ public class Pakli {
                 i++;
             }
         }
+        
     }
 
     private void kirak() {
-        System.out.println("pakli");
+        System.out.println("Ez a pakli");
         for (int i = 1; i < pakli.length; i++) {
             System.out.printf("%-8s", pakli[i]);
             if (i % 3 == 0) {
@@ -76,5 +77,12 @@ public class Pakli {
     private void ezVolt() {
         System.out.println("A választott lap: " + pakli[11]);
     }
+    
+    public String[] getKever(){
+        return pakli;
+    }
 
+    public void setPakli(String[] pakli) {
+        this.pakli = pakli;
+        }
 }

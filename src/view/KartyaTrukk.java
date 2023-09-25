@@ -1,19 +1,15 @@
-package kartyatrukkkonzolon;
+package view;
 
+import modell.Pakli;
 import java.util.Scanner;
 
-public class KartyaTrukkKonzolon {
+public class KartyaTrukk {
 
-    //  private static String[] pakli = new String[22];
     private static final Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        start();
-    }
-
-    private static void start() {
+    public static void start() {
         Pakli alap = new Pakli();
-        String pakli [] = alap.pakli;
+        String pakli[] = alap.pakli;
         for (int i = 1; i < 4; i++) {
             int oszlop = melyik();
             Pakli kevert = new Pakli(pakli, oszlop, i);
@@ -32,5 +28,10 @@ public class KartyaTrukkKonzolon {
         return oszlop;
 
     }
-   
+
+    public static Scanner getSc() {
+        return sc;
+    }
+    
+
 }
